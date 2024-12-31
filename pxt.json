@@ -17,7 +17,6 @@
         "images.g.ts"
     ],
     "testFiles":
-    ],
     "targetVersions": {
         "target": "1.12.58",
         "targetId": "arcade"
