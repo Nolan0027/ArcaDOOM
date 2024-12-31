@@ -1,25 +1,20 @@
- > Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/)
+> Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/)
 
-## Use as Extension
+This port has
+- Enemies (1)
+- Shooting
+- Level 1
 
-This repository can be added as an **extension** in MakeCode.
+Plans
+- Items
+- More enemies (1)
+- Menu
+- Textures overhual (2)
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/nolan0027/arcadoom** and import
-
-## Edit this project ![Build status badge](https://github.com/nolan0027/arcadoom/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
-
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/nolan0027/arcadoom** and click import
-
+> Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/
 ## Blocks preview
 
-This image shows the blocks code from the last commit in master.
+This image shows the blocks code from the last commit in master. 
 This image may take a few minutes to refresh.
 
 ![A rendered view of the blocks](https://github.com/nolan0027/arcadoom/raw/master/.github/makecode/blocks.png)
