@@ -1,6 +1,6 @@
 {
-    "name": "ArcaDOOM V1.1",
-    "version": "1.0.2",
+    "name": "ArcaDOOM",
+    "version": "1.0.0",
     "description": "",
     "dependencies": {
         "device": "*",
@@ -25,5 +25,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
