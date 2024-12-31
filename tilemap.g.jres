@@ -5,22 +5,10 @@
         "tilemapTile": true,
         "displayName": "Rust"
     },
-    "tile5": {
-        "data": "hwQQABAAAADu7u7u7u7u3e7u7u7u7u7d7u7u7u7u7t3u7u7u7u7u3e7u7u7u7u7d7u7u7u7u3t3u7u7u7u7e3e7u7u7u7t7d7u7u7u7u3t3u7u7u7u7e3e7u7u7u7t7d7u7u7u7u7t3u7u7u7u7u3e7u7u7u7u7d7u7u7u7u7t3u7u7u7u7u3Q==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "RustB"
-    },
     "transparency16": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
-    },
-    "tile6": {
-        "data": "hwQQABAAAAAAAAAAAAAAdwAAAAAAAAB3AAAAAAAAAHcAAAAAAAAAdwAAAAAAAAB3AAAAAAAAAHcAAAAAAAAAdwAAAAAAAAB3AAAAAAAAAHcAAAAAAAAAdwAAAAAAAAB3AAAAAAAAAHcAAAAAAAAAdwAAAAAAAAB3AAAAAAAAAHcAAAAAAAAAdw==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "Acid"
     },
     "tile2": {
         "data": "hwQQABAAAAAAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQ==",
@@ -39,6 +27,18 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "RustW"
+    },
+    "tile5": {
+        "data": "hwQQABAAAADd7u7u7u7u3d3u7u7u7u7d3e7u7u7u7t3d7u7u7u7u3d3u7u7u7u7d3e3u7u7u3t3d7e7u7u7e3d3t7u7u7t7d3e3u7u7u3t3d7e7u7u7e3d3t7u7u7t7d3e7u7u7u7t3d7u7u7u7u3d3u7u7u7u7d3e7u7u7u7t3d7u7u7u7u3Q==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "RustB"
+    },
+    "tile6": {
+        "data": "hwQQABAAAAAAd3dwdwBwd3B3d3dwdwB3AHAAdwAAcHcAAAAABwAAdwAHAHAHAAB3cHcAcHcAAHdwB3d3cHcHdwAAAHcAAAB3AABwdwAAAHcHAAd3dwcAd3B3BwB3dwd3dwAAAABwB3cAdwAAAHAHd3B3AHcHcAd3cAdwAHdwAHcAd3cAAHcAdw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Acid"
     },
     "Level1": {
         "id": "Level1",

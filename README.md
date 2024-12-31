@@ -1,7 +1,4 @@
- 
-
-
-> Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/)
+ > Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/)
 
 ## Use as Extension
 

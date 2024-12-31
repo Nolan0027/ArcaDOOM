@@ -4,7 +4,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18"
+        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
+        "darts": "*"
     },
     "files": [
         "main.blocks",
@@ -16,9 +17,7 @@
         "images.g.jres",
         "images.g.ts"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
+    "testFiles": [],
     "targetVersions": {
         "target": "1.12.58",
         "targetId": "arcade"
