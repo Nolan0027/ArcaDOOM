@@ -1,8 +1,6 @@
 > Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/)
 > If that link shows an older build or doesn't work try: https://arcade.makecode.com/S40046-28352-11193-62996
 
-1.0 link: https://arcade.makecode.com/S40046-28352-11193-62996
-
 This port has
 - Enemies (1)
 - Shooting
