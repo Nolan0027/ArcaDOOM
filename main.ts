@@ -51,10 +51,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         Switch.setTitle("Switch weapon")
         Switch.setFlag(SpriteFlag.RelativeToCamera, true)
         Switch.setDimensions(100, 105)
+        Switch.setPosition(85, 94)
         Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
             if (selectedIndex == 0) {
-                Switch.close()
-                A = 0
+                Weapon = 0
                 HandUI.setImage(assets.image`Hand`)
                 Switch.close()
                 A = 0
