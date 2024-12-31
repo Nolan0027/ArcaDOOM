@@ -49,7 +49,7 @@ forever(function () {
     music.play(music.createSong(assets.song`theme1`), music.PlaybackMode.UntilDone)
     music.play(music.createSong(assets.song`theme2`), music.PlaybackMode.UntilDone)
 })
-game.onUpdateInterval(20000, function () {
+game.onUpdateInterval(10000, function () {
     sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
 })
 game.onUpdateInterval(4500, function () {

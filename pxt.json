@@ -5,8 +5,7 @@
     "dependencies": {
         "device": "*",
         "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
-        "darts": "*",
-        "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1"
+        "darts": "*"
     },
     "files": [
         "main.blocks",
@@ -26,5 +25,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

@@ -79,6 +79,63 @@ namespace myImages {
 . . . 2 2 2 2 2 2 2 2 2 2 . . . 
 . . . . . . . . . . . . . . . . 
 `;
+            case "image8":
+            case "Hand":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . e 4 e 4 . . . . . . . 
+. . . 4 e e 4 e e 4 e e 4 . . . 
+. . . 4 4 e 4 e e 4 4 e e . . . 
+. . e e 4 e 4 4 e 4 4 4 e 4 . . 
+. 4 4 e e e 4 4 e e e e e e . . 
+. 4 4 4 e e e e e 4 4 4 4 e e . 
+. . 4 e e 4 4 4 4 e e e e 4 e . 
+. . . e 4 4 e e e e 4 4 e e e . 
+. . . . e e e 4 4 4 4 4 e e e . 
+`;
+            case "image7":
+            case "Hand_gun":return img`
+. . . . . . d d . . . . . . . . 
+. . . . . d d d d . . . . . . . 
+. . . . d d f f d d . . . . . . 
+. . . . d f f f f d . . . . . . 
+. . . . d f f f f d . . . . . . 
+. . . . d f f f f d . . . . . . 
+. . . 1 d d d d d d 1 . . . . . 
+. . 1 d d f d d d f d 1 . . . . 
+. . f d d d f f f d d f . . . . 
+. . f f d d d d d d f f 4 . . . 
+. . e e f f f f f f f 4 4 4 . . 
+. 4 4 e e 4 4 4 e e e e e e . . 
+. 4 4 4 e e e e e 4 4 4 4 e e . 
+. . 4 e e 4 4 4 4 e e e e 4 e . 
+. . . e 4 4 e e e e 4 4 e e e . 
+. . . . e e e 4 4 4 4 4 e e e . 
+`;
+            case "image9":
+            case "Hand_gun2":return img`
+. . . . 5 d d d d 5 . . . . . . 
+. . . 5 d d d d d d 5 . . . . . 
+. . 5 5 d d d d d d 5 5 . . . . 
+. . 5 1 d d f f d d 1 5 . . . . 
+. 5 1 1 d f f f f d 5 5 . . . . 
+. . 5 1 d f f f f d 1 5 . . . . 
+. . . 1 d f f f f d 1 5 . . . . 
+. . 1 d d d d d d d d 1 . . . . 
+. . f d d f d d d f d f . . . . 
+. . f f d d f f f f f f 4 . . . 
+. . e e f f f f f f f 4 4 4 . . 
+. 4 4 e e 4 4 4 4 4 4 4 4 4 . . 
+. 4 4 4 e e 4 4 e e e e e 4 e . 
+. . 4 4 e e e e e 4 4 4 e e e . 
+. . . e 4 4 4 e e e e e 4 4 e . 
+. . . . e e e e 4 4 4 e e e e . 
+`;
             case "image5":
             case "Bg":return img`
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
@@ -138,6 +195,14 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
@@ -193,90 +258,6 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-`;
-            case "image6":
-            case "myImage":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . d d d . . . . 
-. . . . . . . . d . . . d . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
-            case "image8":
-            case "Hand":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . e 4 e 4 . . . . . . . 
-. . . 4 e e 4 e e 4 e e 4 . . . 
-. . . 4 4 e 4 e e 4 4 e e . . . 
-. . e e 4 e 4 4 e 4 4 4 e 4 . . 
-. 4 4 e e e 4 4 e e e e e e . . 
-. 4 4 4 e e e e e 4 4 4 4 e e . 
-. . 4 e e 4 4 4 4 e e e e 4 e . 
-. . . e 4 4 e e e e 4 4 e e e . 
-. . . . e e e 4 4 4 4 4 e e e . 
-`;
-            case "image7":
-            case "Hand_gun":return img`
-. . . . . . d d . . . . . . . . 
-. . . . . d d d d . . . . . . . 
-. . . . d d f f d d . . . . . . 
-. . . . d f f f f d . . . . . . 
-. . . . d f f f f d . . . . . . 
-. . . . d f f f f d . . . . . . 
-. . . 1 d d d d d d 1 . . . . . 
-. . 1 d d f d d d f d 1 . . . . 
-. . f d d d f f f d d f . . . . 
-. . f f d d d d d d f f 4 . . . 
-. . e e f f f f f f f 4 4 4 . . 
-. 4 4 e e 4 4 4 e e e e e e . . 
-. 4 4 4 e e e e e 4 4 4 4 e e . 
-. . 4 e e 4 4 4 4 e e e e 4 e . 
-. . . e 4 4 e e e e 4 4 e e e . 
-. . . . e e e 4 4 4 4 4 e e e . 
-`;
-            case "image9":
-            case "Hand_gun2":return img`
-. . . . 5 d d d d 5 . . . . . . 
-. . . 5 d d d d d d 5 . . . . . 
-. . 5 5 d d d d d d 5 5 . . . . 
-. . 5 1 d d f f d d 1 5 . . . . 
-. 5 1 1 d f f f f d 5 5 . . . . 
-. . 5 1 d f f f f d 1 5 . . . . 
-. . . 1 d f f f f d 1 5 . . . . 
-. . 1 d d d d d d d d 1 . . . . 
-. . f d d f d d d f d f . . . . 
-. . f f d d f f f f f f 4 . . . 
-. . e e f f f f f f f 4 4 4 . . 
-. 4 4 e e 4 4 4 4 4 4 4 4 4 . . 
-. 4 4 4 e e 4 4 e e e e e 4 e . 
-. . 4 4 e e e e e 4 4 4 e e e . 
-. . . e 4 4 4 e e e e e 4 4 e . 
-. . . . e e e e 4 4 4 e e e e . 
 `;
         }
         return null;

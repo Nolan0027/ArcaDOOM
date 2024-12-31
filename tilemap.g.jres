@@ -10,12 +10,6 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "tile5": {
-        "data": "hwQQABAAAADd7u7u7u7u3d3u7u7u7u7d3e7u7u7u7t3d7u7u7u7u3d3u7u7u7u7d3e3u7u7u3t3d7e7u7u7e3d3t7u7u7t7d3e3u7u7u3t3d7e7u7u7e3d3t7u7u7t7d3e7u7u7u7t3d7u7u7u7u3d3u7u7u7u7d3e7u7u7u7t3d7u7u7u7u3Q==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "RustB"
-    },
     "tile4": {
         "data": "hwQQABAAAADdHxERERHx3f0RERERERHfHxEREREREfERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERER8RERERERHx/REREREREd/dHxERERHx3Q==",
         "mimeType": "image/x-mkcd-f4",
@@ -39,6 +33,12 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "Water"
+    },
+    "tile5": {
+        "data": "hwQQABAAAAARERERERERERHh7u7u7h4REe7u7u7u7hER7u7u7u7uERHu7u7u7u4REeHu7u7uHhER4e7u7u4eERHh7u7u7h4REeHu7u7uHhER4e7u7u4eERHh7u7u7h4REe7u7u7u7hER7u7u7u7uERHu7u7u7u4REeHu7u7uHhEREREREREREQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "RustB"
     },
     "Level1": {
         "id": "Level1",
