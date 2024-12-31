@@ -1,15 +1,70 @@
 namespace SpriteKind {
     export const UI = SpriteKind.create()
 }
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Weapon == 0) {
+        HandUI.setImage(assets.image`Hand2`)
+        _2 = darts.create(assets.image`Void`, SpriteKind.Projectile, Render.getRenderSpriteInstance().x, Render.getRenderSpriteInstance().y)
+        _2.throwDart()
+        _2.follow(_3)
+        pause(400)
+        sprites.destroy(_2)
+        HandUI.setImage(assets.image`Hand`)
+    } else {
+        HandUI.setImage(assets.image`Hand_gun2`)
+        _2 = darts.create(assets.image`3`, SpriteKind.Projectile, Render.getRenderSpriteInstance().x, Render.getRenderSpriteInstance().y)
+        _2.angleRate = 0
+        _2.throwDart()
+        _2.follow(_3)
+        pause(400)
+        HandUI.setImage(assets.image`Hand_gun`)
+    }
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    HandUI.setImage(assets.image`Hand_gun2`)
-    _2 = darts.create(assets.image`3`, SpriteKind.Projectile, Render.getRenderSpriteInstance().x, Render.getRenderSpriteInstance().y)
-    _2.follow(_3)
-    pause(400)
-    HandUI.setImage(assets.image`Hand_gun`)
-    _2.angle = Render.getAttribute(Render.attribute.dirX)
-    _2.angleRate = 0
-    _2.throwDart()
+    if (A != 1) {
+        A = 1
+        Switch = miniMenu.createMenu(
+        miniMenu.createMenuItem("Back", assets.image`X`),
+        miniMenu.createMenuItem("Hand", assets.image`Hand`),
+        miniMenu.createMenuItem("Pistol", img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . f f . . . . . . . . . 
+            . . . . f f f f f f f f f f f . 
+            . . . f f d d d d d d d d d f f 
+            . . f f d d d d d d d d d d d f 
+            . f f d d d d d d d d d d d d f 
+            . f f f f f f f f f f f f f f f 
+            . f 4 4 4 f f f . f . . . . . . 
+            . f 4 4 4 f f . . f . . . . . . 
+            . f 4 4 4 f . . f f . . . . . . 
+            . f 4 4 4 f f f f . . . . . . . 
+            . f 4 4 4 f . . . . . . . . . . 
+            . f 4 4 4 f . . . . . . . . . . 
+            . f f f f f . . . . . . . . . . 
+            `)
+        )
+        Switch.setTitle("Switch weapon")
+        Switch.setFlag(SpriteFlag.RelativeToCamera, true)
+        Switch.setDimensions(100, 105)
+        Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
+            if (selectedIndex == 0) {
+                Switch.close()
+                A = 0
+            } else if (selectedIndex == 1) {
+                Weapon = 0
+                HandUI.setImage(assets.image`Hand`)
+                Switch.close()
+                A = 0
+            } else if (selectedIndex == 2) {
+                Weapon = 1
+                HandUI.setImage(assets.image`Hand_gun`)
+                Switch.close()
+                A = 0
+            }
+        })
+    }
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
     if (sprite == _2B) {
@@ -27,10 +82,14 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
     }
 })
 let _2B: Sprite = null
+let Switch: miniMenu.MenuSprite = null
+let A = 0
 let _2: Dart = null
 let HandUI: Sprite = null
 let _3: Sprite = null
+let Weapon = 0
 let _1 = Render.getRenderSpriteVariable()
+Weapon = 1
 _3 = sprites.create(assets.image`4`, SpriteKind.Enemy)
 HandUI = sprites.create(assets.image`Hand_gun`, SpriteKind.UI)
 HandUI.setFlag(SpriteFlag.RelativeToCamera, true)
