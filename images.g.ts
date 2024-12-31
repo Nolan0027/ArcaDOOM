@@ -410,6 +410,44 @@ f f f f f f f f f f f f f f f f
 2 2 2 2 . . . . . . . 2 2 2 2 
 2 2 2 . . . . . . . . . 2 2 2 
 `;
+            case "image15":
+            case "Medkit":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+f f f f f f f f f f f f f f f f 
+f 1 f f 1 1 1 1 1 1 1 1 f f 1 f 
+f f f 1 1 1 1 d d 1 1 1 1 f f f 
+f f 1 1 1 1 d 2 2 d 1 1 1 1 f f 
+f 1 1 1 1 d 2 2 2 2 d 1 1 1 1 f 
+f 1 1 1 1 d 2 2 2 2 d 1 1 1 1 f 
+f f 1 1 1 1 d 2 2 d 1 1 1 1 f f 
+f f f 1 1 1 1 d d 1 1 1 1 f f f 
+f 1 f f 1 1 1 1 1 1 1 1 f f 1 f 
+f f f f f f f f f f f f f f f f 
+`;
+            case "image16":
+            case "Player":return img`
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+. . f f f f f f f f f f f f . . 
+`;
         }
         return null;
     })

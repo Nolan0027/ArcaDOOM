@@ -79,6 +79,16 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "X"
     },
+    "image15": {
+        "data": "hwQQABAAAAAAAAD//////wAAAB//Ef/xAAAA/x8R8f8AAAD/ERER/wAAAB8RERHxAAAAHxHdEfEAAAAf0SId8QAAAB8tItLxAAAAHy0i0vEAAAAf0SId8QAAAB8R3RHxAAAAHxEREfEAAAD/ERER/wAAAP8fEfH/AAAAH/8R//EAAAD//////w==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Medkit"
+    },
+    "image16": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Player"
+    },
     "song1": {
         "data": "008c000408030205001c000f0a006400f4010a00000400000000000000000000000000000000022a0000000400012008000c00012c20002400011b2c003000011934003800011940004400011948004c00011b08001c000e050046006603320000040a002d00000064001400010000020000020c0010001400012018001c00011e",
         "mimeType": "application/mkcd-song",
