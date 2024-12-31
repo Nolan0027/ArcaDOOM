@@ -9,7 +9,7 @@ Plans
 - Items
 - More enemies (1)
 - Menu
-- Textures overhual
+- Textures overhual (2)
 
 > Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/
 ## Blocks preview

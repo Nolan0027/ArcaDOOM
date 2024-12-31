@@ -4,7 +4,8 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18"
+        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
+        "darts": "*"
     },
     "files": [
         "main.blocks",
