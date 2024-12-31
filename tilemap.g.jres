@@ -10,35 +10,35 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "tile2": {
-        "data": "hwQQABAAAAAAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQAAAAAAAACZAAAAAAAAAJkAAAAAAAAAmQ==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "Water"
-    },
-    "tile4": {
-        "data": "hwQQABAAAADdERERERER3R0RERERERHRERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERHREREREREdHdERERERER3Q==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "White"
-    },
-    "tile3": {
-        "data": "hwQQABAAAADkAAAAAO7uTuQAAAAATk7u5AAAAABO7kTkAAAAAN7dTeEAAAAA3t3R7QAAAADe3dHhAAAAAB4R0eEAAAAA3t3d7QAAAADeEd3tAAAAAN7d3e0AAAAA3t3R4QAAAADe3RHkAAAAAN7dQeQAAAAATkRE5AAAAABO5E7kAAAAAE7kRA==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "RustW"
-    },
     "tile5": {
         "data": "hwQQABAAAADd7u7u7u7u3d3u7u7u7u7d3e7u7u7u7t3d7u7u7u7u3d3u7u7u7u7d3e3u7u7u3t3d7e7u7u7e3d3t7u7u7t7d3e3u7u7u3t3d7e7u7u7e3d3t7u7u7t7d3e7u7u7u7t3d7u7u7u7u3d3u7u7u7u7d3e7u7u7u7t3d7u7u7u7u3Q==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "RustB"
     },
+    "tile4": {
+        "data": "hwQQABAAAADdHxERERHx3f0RERERERHfHxEREREREfERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERER8RERERERHx/REREREREd/dHxERERHx3Q==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "White"
+    },
+    "tile3": {
+        "data": "hwQQABAAAADkmZmZme7uTuSZmZmZTk7u5JmZmZlO7kTkmZmZmd7dTeGZmZmZ3t3R7ZmZmZne3dHhmZmZmR4R0eGZmZmZ3t3d7ZmZmZneEd3tmZmZmd7d3e2ZmZmZ3t3R4ZmZmZne3RHkmZmZmd7dQeSZmZmZTkRE5JmZmZlO5E7kmZmZmU7kRA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "RustW"
+    },
     "tile6": {
-        "data": "hwQQABAAAAAAd3dwdwBwd3B3d3dwdwB3AHAAdwAAcHcAAAAABwAAdwAHAHAHAAB3cHcAcHcAAHdwB3d3cHcHdwAAAHcAAAB3AABwdwAAAHcHAAd3dwcAd3B3BwB3dwd3dwAAAABwB3cAdwAAAHAHd3B3AHcHcAd3cAdwAHdwAHcAd3cAAHcAdw==",
+        "data": "hwQQABAAAAD/////////d/////////93/////////3f/////////d/////////93/////////3f/////////d/////////93/////////3f/////////d/////////93/////////3f/////////d/////////93/////////3f/////////dw==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
         "displayName": "Acid"
+    },
+    "tile2": {
+        "data": "hwQQABAAAAD/////////Zv////////9m/////////2b/////////Zv////////9m/////////2b/////////Zv////////9m/////////2b/////////Zv////////9m/////////2b/////////Zv////////9m/////////2b/////////Zg==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Water"
     },
     "Level1": {
         "id": "Level1",

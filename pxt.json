@@ -1,11 +1,12 @@
 {
     "name": "ArcaDOOM",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "",
     "dependencies": {
         "device": "*",
         "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
-        "darts": "*"
+        "darts": "*",
+        "arcade-minimap": "github:microsoft/arcade-minimap#v0.6.1"
     },
     "files": [
         "main.blocks",
@@ -25,5 +26,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
