@@ -5,7 +5,6 @@
     "dependencies": {
         "device": "*",
         "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
-        "darts": "*",
         "arcade-mini-menu": "github:riknoll/arcade-mini-menu#v0.0.1",
         "arcade-text": "github:microsoft/arcade-text#v1.3.0"
     },

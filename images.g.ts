@@ -60,25 +60,6 @@ namespace myImages {
 . . . . . . 2 2 . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 `;
-            case "image2":
-            case "4":return img`
-1 . . . . . . . . . . . . . 1 . 
-1 1 . . . . . . . . . . . 1 1 . 
-1 1 1 . . . . . . . . . . 1 1 1 
-1 1 1 . . 2 2 2 2 2 . . . 1 1 1 
-1 1 1 2 2 2 2 2 2 2 2 2 1 1 1 1 
-2 2 2 2 2 2 7 7 7 2 2 2 2 2 2 1 
-2 2 2 4 2 7 7 2 7 7 2 4 4 2 2 2 
-2 2 4 4 4 2 7 7 7 2 4 4 4 4 2 2 
-2 4 4 4 4 4 2 2 2 4 4 4 4 4 2 2 
-2 1 4 4 4 1 4 4 4 1 4 4 4 1 2 2 
-2 1 1 1 1 1 4 4 1 1 4 4 1 1 2 2 
-1 2 2 2 1 1 1 4 1 1 1 2 2 2 2 1 
-1 1 2 2 2 2 1 1 1 2 2 2 2 2 1 1 
-1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 
-. . . 2 2 2 2 2 2 2 2 2 2 . . . 
-. . . . . . . . . . . . . . . . 
-`;
             case "image7":
             case "Hand_gun":return img`
 . . . . . . d d . . . . . . . . 
@@ -97,25 +78,6 @@ namespace myImages {
 . . 4 e e 4 4 4 4 e e e e 4 e . 
 . . . e 4 4 e e e e 4 4 e e e . 
 . . . . e e e 4 4 4 4 4 e e e . 
-`;
-            case "image9":
-            case "Hand_gun2":return img`
-. . . . 5 d d d d 5 . . . . . . 
-. . . 5 d d d d d d 5 . . . . . 
-. . 5 5 d d d d d d 5 5 . . . . 
-. . 5 1 d d f f d d 1 5 . . . . 
-. 5 1 1 d f f f f d 5 5 . . . . 
-. . 5 1 d f f f f d 1 5 . . . . 
-. . . 1 d f f f f d 1 5 . . . . 
-. . 1 d d d d d d d d 1 . . . . 
-. . f d d f d d d f d f . . . . 
-. . f f d d f f f f f f 4 . . . 
-. . e e f f f f f f f 4 4 4 . . 
-. 4 4 e e 4 4 4 4 4 4 4 4 4 . . 
-. 4 4 4 e e 4 4 e e e e e 4 e . 
-. . 4 4 e e e e e 4 4 4 e e e . 
-. . . e 4 4 4 e e e e e 4 4 e . 
-. . . . e e e e 4 4 4 e e e e . 
 `;
             case "image5":
             case "Bg":return img`
@@ -278,101 +240,6 @@ e e 4 4 4 e e e e e 4 e . . . .
 . . . e e e e 4 4 4 4 4 4 4 4 . 
 . . . . e 4 4 4 4 4 4 4 4 4 4 e 
 `;
-            case "=+zBquqQ$ED`)U{Mt9@K":
-            case "Pistol":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . f f f . . . . . . f f f . 
-. . f f f f f f f f f f f f f f 
-. f f f f f f f f f f f f f f f 
-f f f f f f f f f f f f f f f . 
-. f f e f f f f . f . . . . . . 
-. f e e e f f . . f . . . . . . 
-. f e e e f . . . f . . . . . . 
-. f e e f f f f f . . . . . . . 
-. f e e f . . . . . . . . . . . 
-. f f e f . . . . . . . . . . . 
-. f f f f . . . . . . . . . . . 
-`;
-            case "image11":
-            case "Face":return img`
-f f f f f f f f f f f f f f f f 
-f c c c c e e e e e e e c c c f 
-f c c c e e e e e e e e e c c f 
-f c c e e e e e e e e e e c c f 
-f c c e e e e e e e e e e e c f 
-f c c e e d d 4 4 4 d d e e c f 
-f c c e d e e e 4 d e e e e c f 
-f c d e 4 1 f d 4 4 d f 1 e c f 
-f c d e 4 4 4 4 4 4 4 4 4 e c f 
-f c d 4 4 4 4 4 d 4 4 4 4 4 c f 
-f c c d 4 4 4 4 1 d 4 4 4 4 c f 
-f c c c d 4 4 4 4 4 4 4 4 c c f 
-f c c c d 4 d d 1 d d 4 4 c c f 
-f c c c d d f f f f f d e c c f 
-f c c c c 1 1 d d d d e c c c f 
-f f f f f f f f f f f f f f f f 
-`;
-            case "image13":
-            case "Face1":return img`
-f f f f f f f f f f f f f f f f 
-f c c c c e e e e e e e c c c f 
-f c c c e e e e e e e e e c c f 
-f c c e e e e e e e e e e c c f 
-f c c e e e e e e e e e e e c f 
-f c c e e e d 4 4 4 d d e e c f 
-f c c e d d e e 4 d e e d e c f 
-f c d e 4 e f d 4 4 f d e e c f 
-f c d e 4 4 4 4 4 4 4 4 4 e c f 
-f c d 4 4 4 4 4 d 4 4 4 4 4 c f 
-f c c d 4 4 4 4 1 d 4 4 4 4 c f 
-f c c c d 4 4 4 2 4 4 4 4 c c f 
-f c c c d 4 d d 1 d d 4 4 c c f 
-f c c c d d f f f f f d e c c f 
-f c c c c 1 1 d d d d e c c c f 
-f f f f f f f f f f f f f f f f 
-`;
-            case "image12":
-            case "Face0":return img`
-f f f f f f f f f f f f f f f f 
-f c c c c e e e e e e e c c c f 
-f c c c e e e e e e e e e c c f 
-f c c e e e e e e e e e e c c f 
-f c c e e e e e e e e e e e c f 
-f c c e e d d 4 4 4 d d e e c f 
-f c c e d e e e 4 d e e e e c f 
-f c d e 4 1 f d 4 4 d f 1 e c f 
-f c d e 4 4 4 4 4 4 4 4 5 e c f 
-f c 5 5 4 4 4 4 d 4 4 4 5 5 c f 
-f c c 5 5 4 4 4 1 d 4 5 5 5 c f 
-f c c c 5 5 5 5 5 5 5 5 5 c c f 
-f c c c 5 5 d d 1 d d 5 5 c c f 
-f c c c 5 5 f f f f f 5 5 c c f 
-f c c c c 5 5 5 5 5 5 5 c c c f 
-f f f f f f f f f f f f f f f f 
-`;
-            case "image14":
-            case "Face2":return img`
-f f f f f f f f f f f f f f f f 
-f c c c c e e e e e e e c c c f 
-f c c c e e e e e e e e e c c f 
-f c c e e e e e e e e e e c c f 
-f c c e e e e e e e e e e e c f 
-f c c e e e d 4 4 4 d d e e c f 
-f c c e d d e e 4 d e e d e c f 
-f c d e 4 e f d 4 4 f d e e c f 
-f c d e 4 4 4 4 4 4 4 4 5 e c f 
-f c 5 5 4 4 4 4 d 4 4 4 5 5 c f 
-f c c 5 5 4 4 4 1 d 4 5 5 5 c f 
-f c c c 5 5 5 5 2 5 5 5 5 c c f 
-f c c c 5 5 d d 1 d d 5 5 c c f 
-f c c c 5 5 f f f f f 5 5 c c f 
-f c c c c 5 5 5 5 5 5 5 c c c f 
-f f f f f f f f f f f f f f f f 
-`;
             case "image6":
             case "X":return img`
 2 2 2 . . . . . . . . . 2 2 2 
@@ -531,47 +398,6 @@ fffffffeee4eeee444444eee44eeeffffffff
 ffffffffcceee444dddd344eeecffffffffff
 ffffffffffeee4444444444eeefffffffffff
 fffffffffffee444444444eefffffffffffff
-`;
-            case "*:0x-1Vd8JB|Z){WNy`H":
-            case "Reload1":return img`
-.ccc..dc....................................
-fcccccd111d.................................
-fffffccccbbd111db...........................
-..fffcccccccccccffccb.......................
-ffffffcccccccfcffffcbd1111dcfc..............
-ffffffffffbdccfffffcccccbbbfffc.............
-fcffffffffbccccccffccccccfffffff............
-ffffffffcdbcffcccccccccccfffffff............
-...fffffccffbfffcfcffffcffffffff............
-......ffffbccffffcccffffffffffff............
-......cfccdbcfffffccfffffffffff.............
-......ffcceeeeeffffcfffffffffff.............
-.....cfffcccee4effffffffc....ff.............
-.....cffcfffee43efffffffc...................
-.....ffffffcee333cfffffff...................
-.....cfffffeee4444ecfc......................
-.....efffffee44444eeeee.....................
-.....efffffceeee44eeeee.....................
-....effffffceeee44eeeeee....................
-...cefffffffeeceeeeeeeee....................
-...eefffffffcceeeeeeeeee....................
-...cfffffffffceee444eeee....................
-...cffffffffceeee444eeee....................
-...cffffffcfeee4eee44eec....................
-...fffffffffeeeee444eeeec...................
-...ffffffcfceeeee44eeeeeec..................
-...ffffcccfeeeeeeee4eeeeccc.................
-...fccccccfcceeee4eeeee4eef.................
-....fcccccffeee4ecee44e4e4ec................
-.....cfccffceeeeccee444e444ee...............
-.........cfeeeefceee44444444eec.............
-..........cccecfeeeee4444e4444eec...........
-...........cfcffeeeee444ee4334444ec.........
-............ccffcceeeee444433333344ec.......
-.............cffccceeee4444d433333334e......
-...............ffcceeeee44444433333334ee....
-...............fffceeeee4444333333333444ec..
-................fffceeee444433333333344444e.
 `;
             case "-9x8S(dPBbe_wCp^b$:j":
             case "HandPistol":return img`
