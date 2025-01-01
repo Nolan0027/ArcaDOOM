@@ -1,40 +1,22 @@
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Weapon == 0) {
         HandUI.setImage(assets.image`Hand2`)
-        _2 = darts.create(assets.image`Void`, SpriteKind.Projectile, Render.getRenderSpriteInstance().x, Render.getRenderSpriteInstance().y)
-        _2.throwDart()
-        _2.follow(_3)
-        pause(400)
+        _2 = sprites.createProjectileFromSprite(assets.image`Void`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
+        pause(300)
         sprites.destroy(_2)
         HandUI.setImage(assets.image`Hand`)
     } else {
-        if (info.life() > 50) {
-            Face.setImage(assets.image`Face0`)
-        } else {
-            Face.setImage(assets.image`Face2`)
-        }
-        HandUI.setImage(assets.image`Hand_gun2`)
-        _2 = darts.create(assets.image`3`, SpriteKind.Projectile, Render.getRenderSpriteInstance().x, Render.getRenderSpriteInstance().y)
-        _2.throwDart()
-        _2.follow(_3)
+        Face.setImage(assets.image`Face01`)
+        HandUI.setImage(assets.image`GunShoot`)
+        _2 = sprites.createProjectileFromSprite(assets.image`3`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
         pause(400)
-        if (info.life() > 50) {
-            Face.setImage(assets.image`Face`)
-        } else {
-            Face.setImage(assets.image`Face1`)
-        }
-        HandUI.setImage(assets.image`Hand_gun`)
+        HandUI.setImage(assets.image`HandPistol`)
     }
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
     if (sprite == _2B) {
         info.changeLifeBy(-19)
         sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
-        if (info.life() > 50) {
-            Face.setImage(assets.image`Face`)
-        } else {
-            Face.setImage(assets.image`Face1`)
-        }
     }
 })
 scene.onHitWall(SpriteKind.Projectile, function (sprite, location) {
@@ -46,7 +28,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         Switch = miniMenu.createMenu(
         miniMenu.createMenuItem("Back", assets.image`X`),
         miniMenu.createMenuItem("Hand", assets.image`Hand`),
-        miniMenu.createMenuItem("Pistol", assets.image`Pistol`)
+        miniMenu.createMenuItem("Pistol", assets.image`PistolItem`)
         )
         Switch.setTitle("Switch weapon")
         Switch.setFlag(SpriteFlag.RelativeToCamera, true)
@@ -84,32 +66,45 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 let Switch: miniMenu.MenuSprite = null
 let A = 0
 let _2B: Sprite = null
-let _2: Dart = null
+let _2: Sprite = null
 let HandUI: Sprite = null
 let Face: Sprite = null
 let _3: Sprite = null
 let Weapon = 0
 Weapon = 1
 let _1 = sprites.create(assets.image`Player`, SpriteKind.Player)
-_3 = sprites.create(assets.image`4`, SpriteKind.Enemy)
-Face = sprites.create(assets.image`Face`, SpriteKind.Player)
-HandUI = sprites.create(assets.image`Hand_gun`, SpriteKind.Player)
+_3 = sprites.create(assets.image`Enemy`, SpriteKind.Enemy)
+Face = sprites.create(assets.image`Face01`, SpriteKind.Player)
+HandUI = sprites.create(assets.image`HandPistol`, SpriteKind.Player)
 let Medkit = sprites.create(assets.image`Medkit`, SpriteKind.Food)
+let UI = sprites.create(assets.image`UI`, SpriteKind.Player)
+let PistolItem = sprites.create(assets.image`PistolItem`, SpriteKind.Player)
+let GunShoot = sprites.create(assets.image`GunShoot`, SpriteKind.Player)
 _1 = Render.getRenderSpriteVariable()
 HandUI.setFlag(SpriteFlag.RelativeToCamera, true)
-HandUI.scale = 3.4
-HandUI.setPosition(81, 103)
+UI.setFlag(SpriteFlag.RelativeToCamera, true)
+HandUI.scale = 1.2
+HandUI.setPosition(135, 97)
+UI.setPosition(68, 110)
+UI.scale = 0.35
 Render.move(Render.getRenderSpriteInstance(), 100)
+info.setLife(100)
 _1.setPosition(150, 250)
-Face.setPosition(15, 99)
-Face.scale = 3
+Face.setPosition(68, 110)
+Face.scale = 0.6
 _3.setPosition(180, 400)
+_3.scale = 0.3
 Medkit.setPosition(200, 420)
 Medkit.scale = 0.6
 Face.setFlag(SpriteFlag.RelativeToCamera, true)
+let HealthText = textsprite.create(convertToText(info.life()))
+HealthText.setOutline(2, 2)
+HealthText.setPosition(92, 107)
+HealthText.z = 999
+HealthText.scale = 1.2
+HealthText.setFlag(SpriteFlag.RelativeToCamera, true)
 tiles.setCurrentTilemap(tilemap`Level`)
 scene.setBackgroundImage(assets.image`Bg`)
-info.setLife(100)
 music.play(music.createSong(assets.song`theme1`), music.PlaybackMode.UntilDone)
 music.play(music.createSong(assets.song`theme2`), music.PlaybackMode.UntilDone)
 music.play(music.createSong(assets.song`Drums`), music.PlaybackMode.LoopingInBackground)
