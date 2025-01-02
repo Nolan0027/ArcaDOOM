@@ -1,5 +1,8 @@
 > Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/)
 
+Current Filesize
+- Commit 46 (1.2Pre2.2): 63Kb (.png-based download)
+
 This port has
 - Enemies (1)
 - Shooting
