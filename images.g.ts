@@ -350,26 +350,6 @@ ec434ccffbbbffcfcccc
 ............bbbc....
 ............cbbc....
 `;
-            case "image2":
-            case "UIbar":return img`
-ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-feeeeeeeeeeeeeeeeeefff...........fffeeeeeeeeeeeeeeeeeeef
-feeeeeeeeeeeeeeeeeeff.............ffeeeeeeeeeeeeeeeeeeef
-feeeeeeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeef
-feeeeeeeeeeeffffffff...............feeeeeeeeeeefffffffff
-feeeeeeeeeeef22ff2ff...............feeeeeeeeeeef22ff2fff
-feeeeeeeeeeef22f2fff...............feeeeeeeeeeef22f2ffff
-feeeeeeeeeeeffff2fef...............feeeeeeeeeeeffff2feff
-feeeeeeeeeeeeef2ffff...............feeeeeeeeeeeeef2fffff
-feeeeeeeeeeeeff2f22f...............feeeeeeeeeeeeff2f22ff
-feeeeeeeeeeeef2ff22f...............feeeeeeeeeeeef2ff22ff
-feeeeeeeeeeeefffffff...............feeeeeeeeeeeeffffffff
-fdededdeedeededdddef...............fedeedeeededeedddedef
-fdddedeedededeededef...............fdededdededededededdf
-fdededdedddedeededdff.............ffdddedeededededededef
-fdededdedededdededdfff...........fffdededeededededddedef
-ffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-`;
             case "}7~:$;#b0rr%w{lP{fX`":
             case "Ha4":return img`
 . . 
@@ -549,6 +529,26 @@ f f 1 1 1 1 4 2 2 4 1 1 1 1 f f
 f f f 1 1 1 1 2 2 1 1 1 1 f f f 
 f f f f 1 1 1 1 1 1 1 1 f f f f 
 f f f f f f f f f f f f f f f f 
+`;
+            case "image2":
+            case "UIbar":return img`
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+feeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefff...........fffeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef
+feeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeff.............ffeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef
+feeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeeeeeeeeeef
+feeeeeeeeeefffffffeeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeefffffffff
+feeeeeeeeeef22ff2feeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeef22ff2fff
+feeeeeeeeeef22f2ffeeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeef22f2ffff
+feeeeeeeeeeffff2feeeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeeffff2feff
+feeeeeeeeeefef2ffffeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeeeef2fffff
+feeeeeeeeeefff2f22feeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeeeff2f22ff
+feeeeeeeeeeff2ff22feeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeeef2ff22ff
+feeeeeeeeeeffffffffeeeeeeeeeeeeef...............feeeeeeeeeeeeeeeeeeeeeeeffffffff
+fdededdeedeededdddeeeeeeeeeeeeeef...............feeeeeeeeeeeedeedeeededeedddedef
+fdddedeedededeededeeeeeeeeeeeeeef...............feeeeeeeeeeedededdededededededdf
+fdededdedddedeededdeeeeeeeeeeeeeff.............ffeeeeeeeeeeedddedeededededededef
+fdededdedededdededdeeeeeeeeeeeeefff...........fffeeeeeeeeeeedededeededededddedef
+ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 `;
         }
         return null;

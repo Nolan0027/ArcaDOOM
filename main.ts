@@ -83,7 +83,7 @@ scene.setBackgroundImage(assets.image`Bg`)
 tiles.setCurrentTilemap(tilemap`Void`)
 let Menu = miniMenu.createMenu(
 miniMenu.createMenuItem("Single Player"),
-miniMenu.createMenuItem("Options")
+miniMenu.createMenuItem("2-player")
 )
 Menu.setTitle("Main menu")
 Menu.setDimensions(100, 100)
@@ -118,7 +118,7 @@ Menu.onButtonPressed(controller.A, function (selection, selectedIndex) {
                 UI.scale = 1.5
                 Render.move(Render.getRenderSpriteInstance(), 100)
                 info.setLife(100)
-                Render.getRenderSpriteInstance().setPosition(15, 4)
+                Render.getRenderSpriteInstance().setPosition(200, 200)
                 Face.setPosition(68, 110)
                 Face.scale = 0.6
                 _3.setPosition(180, 400)
