@@ -3,15 +3,27 @@
 This port has
 - Enemies (1)
 - Shooting
-- Level 1
+- Hangar
+- Stats
+- Doom's UI
+- Alot more
 
 Plans
-- Items
+- items (2)
 - More enemies (1)
-- Menu
-- Textures overhual (2)
+- Menu (done)
+- Textures overhual (yes)
+- Level 1
+- Optimize to under a megabyte (10k bytes over (as of 42nd commit))
+- Add physical pistol item
+- Shotgun
+- Chaingun
+- Pause menu
+- Courpses
+- Warning
+- Ammo system & ammo boxes
+- New switch menu with array system
 
-> Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/
 ## Blocks preview
 
 This image shows the blocks code from the last commit in master. 
