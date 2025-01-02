@@ -1,10 +1,3 @@
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
-    if (sprite == _2B) {
-        info.changeLifeBy(-19)
-        sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
-        RenderStats()
-    }
-})
 function Start (N: number) {
     Menu2.close()
     Render.setViewMode(ViewMode.raycastingView)
@@ -15,7 +8,6 @@ function Start (N: number) {
     UI = sprites.create(assets.image`UIbar`, SpriteKind.Player)
     Face = sprites.create(assets.image`Face`, SpriteKind.Player)
     _3 = sprites.create(assets.image`Enemy`, SpriteKind.Enemy)
-    A = 0
     scene.setBackgroundImage(assets.image`Bg`)
     tiles.setCurrentTilemap(tilemap`Hangar`)
     ArmorItem = sprites.create(assets.image`Armor`, SpriteKind.Food)
@@ -41,6 +33,7 @@ function Start (N: number) {
     Health = textsprite.create("100")
     ArmorText = textsprite.create("0")
     RenderStats()
+    A = 0
     music.play(music.createSong(assets.song`Drums`), music.PlaybackMode.LoopingInBackground)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -59,6 +52,13 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    if (sprite == _2B) {
+        info.changeLifeBy(-19)
+        sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
+        RenderStats()
+    }
+})
 function RenderStats () {
     sprites.destroy(Health)
     sprites.destroy(ArmorText)
@@ -73,17 +73,6 @@ function RenderStats () {
     Health.setFlag(SpriteFlag.RelativeToCamera, true)
     ArmorText.setFlag(SpriteFlag.RelativeToCamera, true)
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    if (otherSprite == ArmorItem) {
-        Armor += 5
-    } else {
-        if (info.life() + 20 > 100) {
-            info.changeLifeBy(30)
-        }
-    }
-    sprites.destroy(otherSprite)
-    RenderStats()
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (A != 1) {
         A = 1
@@ -117,8 +106,20 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
         info.changeScoreBy(5)
     }
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    if (otherSprite == ArmorItem) {
+        Armor += 5
+    } else {
+        if (info.life() + 20 > 100) {
+            info.changeLifeBy(30)
+        }
+    }
+    sprites.destroy(otherSprite)
+    RenderStats()
+})
 let Switch: miniMenu.MenuSprite = null
 let Armor = 0
+let _2B: Sprite = null
 let _2: Sprite = null
 let ArmorText: TextSprite = null
 let Health: TextSprite = null
@@ -130,7 +131,6 @@ let Medkit: Sprite = null
 let HandUI: Sprite = null
 let _1: Sprite = null
 let Weapon = 0
-let _2B: Sprite = null
 let Menu2: miniMenu.MenuSprite = null
 let A = 0
 A = 1
