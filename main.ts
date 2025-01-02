@@ -1,3 +1,30 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (A == 0) {
+        A = 1
+        Switch = miniMenu.createMenu(
+        miniMenu.createMenuItem("Back"),
+        miniMenu.createMenuItem("1", assets.image`Hand`),
+        miniMenu.createMenuItem("2", assets.image`Pistol`)
+        )
+        Switch.setTitle("Switch weapon")
+        Switch.setFlag(SpriteFlag.RelativeToCamera, true)
+        Switch.setDimensions(100, 105)
+        Switch.setPosition(81, 86)
+        Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
+            if (selectedIndex == 0) {
+                Switch.close()
+            } else if (selectedIndex == 1) {
+                Weapon = 0
+                HandUI.setImage(assets.image`Hand`)
+            } else if (selectedIndex == 2) {
+                Weapon = 1
+                HandUI.setImage(assets.image`HandPistol`)
+            }
+            Switch.close()
+            A = 0
+        })
+    }
+})
 function Start (N: number) {
     Menu2.close()
     Render.setViewMode(ViewMode.raycastingView)
@@ -11,7 +38,7 @@ function Start (N: number) {
     scene.setBackgroundImage(assets.image`Bg`)
     tiles.setCurrentTilemap(tilemap`Hangar`)
     ArmorItem = sprites.create(assets.image`Armor`, SpriteKind.Food)
-    ArmorItem.setPosition(48, 81)
+    ArmorItem.setPosition(28, 88)
     ArmorItem.scale = 0.8
     HandUI.setFlag(SpriteFlag.RelativeToCamera, true)
     UI.setFlag(SpriteFlag.RelativeToCamera, true)
@@ -19,10 +46,11 @@ function Start (N: number) {
     HandUI.setPosition(135, 97)
     UI.setPosition(81, 109)
     UI.scale = 1.5
-    Render.move(Render.getRenderSpriteInstance(), 100)
+    Render.move(Render.getRenderSpriteInstance(), 170)
     info.setScore(0)
     info.setLife(100)
-    Render.getRenderSpriteInstance().setPosition(94, 82)
+    Render.getRenderSpriteInstance().setPosition(248, 45)
+    Render.setViewAngleInDegree(90)
     Face.setPosition(80, 110)
     Face.scale = 0.6
     _3.setPosition(180, 400)
@@ -33,13 +61,14 @@ function Start (N: number) {
     Health = textsprite.create("100")
     ArmorText = textsprite.create("0")
     RenderStats()
-    A = 0
     music.play(music.createSong(assets.song`Drums`), music.PlaybackMode.LoopingInBackground)
+    A = 0
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (A == 0) {
         if (Weapon == 1) {
             HandUI.setImage(assets.image`PistolShoot`)
+            music.play(music.createSoundEffect(WaveShape.Noise, 1072, 359, 255, 255, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.InBackground)
             _2 = sprites.createProjectileFromSprite(assets.image`3`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
             pause(400)
             HandUI.setImage(assets.image`HandPistol`)
@@ -48,7 +77,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             _2 = sprites.createProjectileFromSprite(assets.image`PunchEffect`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
             pause(300)
             sprites.destroy(_2)
-            HandUI.setImage(assets.image`HandIdle`)
+            HandUI.setImage(assets.image`Hand`)
         }
     }
 })
@@ -73,33 +102,6 @@ function RenderStats () {
     Health.setFlag(SpriteFlag.RelativeToCamera, true)
     ArmorText.setFlag(SpriteFlag.RelativeToCamera, true)
 }
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (A != 1) {
-        A = 1
-        Switch = miniMenu.createMenu(
-        miniMenu.createMenuItem("Back"),
-        miniMenu.createMenuItem("1", assets.image`HandIdle`),
-        miniMenu.createMenuItem("2", assets.image`Pistol`)
-        )
-        Switch.setTitle("Switch weapon")
-        Switch.setFlag(SpriteFlag.RelativeToCamera, true)
-        Switch.setDimensions(100, 105)
-        Switch.setPosition(81, 86)
-        Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
-            if (selectedIndex == 0) {
-                Switch.close()
-            } else if (selectedIndex == 1) {
-                Weapon = 0
-                HandUI.setImage(assets.image`HandIdle`)
-            } else if (selectedIndex == 2) {
-                Weapon = 1
-                HandUI.setImage(assets.image`HandPistol`)
-            }
-            Switch.close()
-            A = 0
-        })
-    }
-})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (sprite == _2) {
         sprites.destroy(otherSprite)
@@ -117,7 +119,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     sprites.destroy(otherSprite)
     RenderStats()
 })
-let Switch: miniMenu.MenuSprite = null
 let Armor = 0
 let _2B: Sprite = null
 let _2: Sprite = null
@@ -128,9 +129,10 @@ let _3: Sprite = null
 let Face: Sprite = null
 let UI: Sprite = null
 let Medkit: Sprite = null
-let HandUI: Sprite = null
 let _1: Sprite = null
+let HandUI: Sprite = null
 let Weapon = 0
+let Switch: miniMenu.MenuSprite = null
 let Menu2: miniMenu.MenuSprite = null
 let A = 0
 A = 1
