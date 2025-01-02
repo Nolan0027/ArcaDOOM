@@ -4,18 +4,6 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "tile7": {
-        "data": "hwQQABAAAADd3/3/////Zv39/f////9m3d/9/////2b9/f3/////Zt3f/f////9m/f39/////2bd3/3/////Zv39/f////9m3d/9/////2b9/f3/////Zt3f/f////9m/f39/////2bd3/3/////Zv39/f////9m3d/9/////2b9/f3/////Zg==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "Water0"
-    },
-    "tile6": {
-        "data": "hwQQABAAAADd3/3/////Z/39/f////923d/9/////2f9/f3/////dt3f/f////9n/f39/////3bd3/3/////Z/39/f////923d/9/////2f9/f3/////dt3f/f////9n/f39/////3bd3/3/////Z/39/f////923d/9/////2f9/f3/////dg==",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "Acid"
-    },
     "tile4": {
         "data": "hwQQABAAAAD///////////39393d3d/d/f3f3d3d/////9/d3d3f3d3d393d3f/////f3d3d393d3d/d3d3/////393d3d/d3d3f3d3d/////9/d3d3f3d3d393d3f/////f/f//393d3d/93d3U/f//3/3d3dT93d3f/d3/393//////////w==",
         "mimeType": "image/x-mkcd-f4",

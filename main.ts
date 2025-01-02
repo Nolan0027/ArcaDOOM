@@ -70,7 +70,6 @@ let _2: Sprite = null
 let Health: TextSprite = null
 let _3: Sprite = null
 let Face: Sprite = null
-let PistolItem: Sprite = null
 let UI: Sprite = null
 let Medkit: Sprite = null
 let HandUI: Sprite = null
@@ -106,9 +105,9 @@ Menu.onButtonPressed(controller.A, function (selection, selectedIndex) {
                 HandUI = sprites.create(assets.image`HandPistol`, SpriteKind.Player)
                 Medkit = sprites.create(assets.image`Medkit`, SpriteKind.Food)
                 UI = sprites.create(assets.image`UIbar`, SpriteKind.Player)
-                PistolItem = sprites.create(assets.image`Ha4`, SpriteKind.Player)
                 Face = sprites.create(assets.image`Face`, SpriteKind.Player)
                 _3 = sprites.create(assets.image`Enemy`, SpriteKind.Enemy)
+                A = 0
                 scene.setBackgroundImage(assets.image`Bg`)
                 tiles.setCurrentTilemap(tilemap`Level`)
                 HandUI.setFlag(SpriteFlag.RelativeToCamera, true)
@@ -119,7 +118,7 @@ Menu.onButtonPressed(controller.A, function (selection, selectedIndex) {
                 UI.scale = 1.5
                 Render.move(Render.getRenderSpriteInstance(), 100)
                 info.setLife(100)
-                _1.setPosition(154, 109)
+                Render.getRenderSpriteInstance().setPosition(15, 4)
                 Face.setPosition(68, 110)
                 Face.scale = 0.6
                 _3.setPosition(180, 400)
@@ -132,7 +131,6 @@ Menu.onButtonPressed(controller.A, function (selection, selectedIndex) {
                 Health.setPosition(34, 111)
                 Health.scale = 1.2
                 Health.setFlag(SpriteFlag.RelativeToCamera, true)
-                A = 0
                 music.play(music.createSong(assets.song`Drums`), music.PlaybackMode.LoopingInBackground)
             }
         })
