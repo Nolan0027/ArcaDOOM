@@ -14,7 +14,7 @@ Plans
 - Menu (done)
 - Textures overhual (yes)
 - Level 1
-- Optimize to under a megabyte (10k bytes over (as of 42nd commit))
+- Optimize to under a megabyte (DONE, 886Kb as of 42nd commit)
 - Add physical pistol item
 - Shotgun
 - Chaingun
