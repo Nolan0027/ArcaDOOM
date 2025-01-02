@@ -3,25 +3,6 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image1":
-            case "3":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . 2 5 2 . . . . . . . 
-. . . . . . 5 5 5 . . . . . . . 
-. . . . . . 2 5 2 . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
             case "image6":
             case "X":return img`
 2 2 2 . . . . . . . . . 2 2 2 
@@ -503,31 +484,6 @@ eeeeeeeeeeeee.........fccceeeeeeeeeeeeeeeeeeeeeccc..............
 .............................ccccceeeeeeeeee44eeeeeeeeeeceecffc.
 ..............................fcccceeeeeeeee4eeeeeeeeeeeeeeecccc
 `;
-            case "4?Sn-%V?*/=hvug":
-            case "Ha1":return img`
-a c e 7 6 7 
-a c 8 7 7 7 
-3 7 f 2 7 b 
-`;
-            case "8#CE65g3*3D22ZX1DCjg":
-            case "Ha2":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
             case "image7":
             case "Armor":return img`
 . . . . . . . . . . . . . . . 
@@ -546,33 +502,6 @@ d 7 7 7 d d 7 7 7 7 d d d 7 7
 . . . f 7 7 7 7 7 7 7 f . . . 
 . . . . 7 7 7 7 7 7 7 . . . . 
 `;
-            case "LO$2Vg!ZZq)_Cs":
-            case "Pistol":return img`
-.................................................
-..........fffffcccccccccccccccccccccccccccccccccc
-.........fffffcccccffccccccfccccccccccccccccccccc
-.......fffffffccccfffccccccffcccccccccccccccccccc
-....ffffffffffffccfffffffffffcccccccccccccccccccc
-....fffffffffffffffffffffffffffffffffffffffcccccc
-...ffffffffffffffffffffffffffffffffffffffffffffcc
-...fffffffffffffffffccccccccccccccccccccccccccccc
-....fffffffffffffffffffffffffcffccc..............
-......fffffffffffffffffffffcccff.................
-......ffffffffffffffff.ccc...cff.................
-......fffffffffffffff........cff.................
-......fffffffffffffff........fff.................
-.....ffffffffffffffffffffffffff..................
-....fffffffffffffffffffffffff....................
-....ffffffffffffff...............................
-..ffffffffffffffff...............................
-..ffffffffffffffff...............................
-.fffffffffffffffff...............................
-.ffffffffffffffff................................
-ffffffffffffffff.................................
-ffffffffffffffff.................................
-ffffffffffffffff.................................
-ffffffffffffffff.................................
-`;
             case "image16":
             case "Player":return img`
 f f f f f f f f f f f f 
@@ -589,6 +518,56 @@ f f f f f f f f f f f f
 f f f f f f f f f f f f 
 f f f f f f f f f f f f 
 f f f f f f f f f f f f 
+`;
+            case "LO$2Vg!ZZq)_Cs":
+            case "Pistol":return img`
+........ffffcccccccccccccccccccccccccccccc
+.......ffffcccccfccccccfcccccccccccccccccc
+.....ffffffccccffccccccffccccccccccccccccc
+..fffffffffffccffffffffffccccccccccccccccc
+..fffffffffffffffffffffffffffffffffffccccc
+.ffffffffffffffffffffffffffffffffffffffffc
+.ffffffffffffffffccccccccccccccccccccccccc
+..fffffffffffffffffffffffffccc............
+....fffffffffffffffffffccff...............
+....ffffffffffffff.ccc...ff...............
+....fffffffffffff........ff...............
+...fffffffffffffffffffffff................
+..fffffffffffffffffffffff.................
+..fffffffffffff...........................
+..fffffffffffff...........................
+.ffffffffffffff...........................
+.ffffffffffffff...........................
+.fffffffffffff............................
+.ffffffffffff.............................
+.ffffffffffff.............................
+fffffffffffff.............................
+fffffffffffff.............................
+`;
+            case "8#CE65g3*3D22ZX1DCjg":
+            case "L":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image1":
+            case "3":return img`
+2 5 2 
+5 5 5 
+2 5 2 
 `;
         }
         return null;

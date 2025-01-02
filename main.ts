@@ -1,3 +1,10 @@
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    if (sprite == _2B) {
+        info.changeLifeBy(-19)
+        sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
+        RenderStats()
+    }
+})
 function Start (N: number) {
     Menu2.close()
     Render.setViewMode(ViewMode.raycastingView)
@@ -33,14 +40,7 @@ function Start (N: number) {
     Face.setFlag(SpriteFlag.RelativeToCamera, true)
     Health = textsprite.create("100")
     ArmorText = textsprite.create("0")
-    Health.setOutline(1, 2)
-    ArmorText.setOutline(1, 2)
-    Health.setPosition(44, 110)
-    ArmorText.setPosition(94, 110)
-    Health.scale = 1.2
-    ArmorText.scale = 1.2
-    Health.setFlag(SpriteFlag.RelativeToCamera, true)
-    ArmorText.setFlag(SpriteFlag.RelativeToCamera, true)
+    RenderStats()
     music.play(music.createSong(assets.song`Drums`), music.PlaybackMode.LoopingInBackground)
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -52,57 +52,27 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             HandUI.setImage(assets.image`HandPistol`)
         } else {
             HandUI.setImage(assets.image`Punch0`)
-            _2 = sprites.createProjectileFromSprite(assets.image`Ha2`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
+            _2 = sprites.createProjectileFromSprite(assets.image`3`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
             pause(300)
             sprites.destroy(_2)
             HandUI.setImage(assets.image`HandIdle`)
         }
     }
 })
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
-    if (sprite == _2B) {
-        info.changeLifeBy(-19)
-        sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
-    }
+function RenderStats () {
+    sprites.destroy(Health)
+    sprites.destroy(ArmorText)
     Health = textsprite.create(convertToText(info.life()))
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (A != 1) {
-        A = 1
-        Switch = miniMenu.createMenu(
-        miniMenu.createMenuItem("Back", assets.image`X`),
-        miniMenu.createMenuItem("1", assets.image`HandIdle`),
-        miniMenu.createMenuItem("2", assets.image`Pistol`)
-        )
-        Switch.setTitle("Switch weapon")
-        Switch.setFlag(SpriteFlag.RelativeToCamera, true)
-        Switch.setDimensions(100, 105)
-        Switch.setPosition(81, 86)
-        Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
-            if (selectedIndex == 0) {
-                A = 0
-                Switch.close()
-            } else if (selectedIndex == 1) {
-                A = 0
-                Weapon = 0
-                HandUI.setImage(assets.image`HandIdle`)
-                Switch.close()
-            } else if (selectedIndex == 2) {
-                A = 0
-                Weapon = 1
-                HandUI.setImage(assets.image`HandPistol`)
-                Switch.close()
-            }
-        })
-    }
-})
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-    if (sprite == _2) {
-        sprites.destroy(_3)
-        sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
-        info.changeScoreBy(1)
-    }
-})
+    ArmorText = textsprite.create(convertToText(Armor))
+    Health.setOutline(1, 2)
+    ArmorText.setOutline(1, 2)
+    Health.setPosition(44, 110)
+    ArmorText.setPosition(94, 110)
+    Health.scale = 1.2
+    ArmorText.scale = 1.2
+    Health.setFlag(SpriteFlag.RelativeToCamera, true)
+    ArmorText.setFlag(SpriteFlag.RelativeToCamera, true)
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     if (otherSprite == ArmorItem) {
         Armor += 5
@@ -112,12 +82,43 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
         }
     }
     sprites.destroy(otherSprite)
-    Health = textsprite.create(convertToText(info.life()))
-    ArmorText = textsprite.create(convertToText(Armor))
+    RenderStats()
 })
-let Armor = 0
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (A != 1) {
+        A = 1
+        Switch = miniMenu.createMenu(
+        miniMenu.createMenuItem("Back"),
+        miniMenu.createMenuItem("1", assets.image`HandIdle`),
+        miniMenu.createMenuItem("2", assets.image`Pistol`)
+        )
+        Switch.setTitle("Switch weapon")
+        Switch.setFlag(SpriteFlag.RelativeToCamera, true)
+        Switch.setDimensions(100, 105)
+        Switch.setPosition(81, 86)
+        Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
+            if (selectedIndex == 0) {
+                Switch.close()
+            } else if (selectedIndex == 1) {
+                Weapon = 0
+                HandUI.setImage(assets.image`HandIdle`)
+            } else if (selectedIndex == 2) {
+                Weapon = 1
+                HandUI.setImage(assets.image`HandPistol`)
+            }
+            Switch.close()
+            A = 0
+        })
+    }
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    if (sprite == _2) {
+        sprites.destroy(otherSprite)
+        info.changeScoreBy(5)
+    }
+})
 let Switch: miniMenu.MenuSprite = null
-let _2B: Sprite = null
+let Armor = 0
 let _2: Sprite = null
 let ArmorText: TextSprite = null
 let Health: TextSprite = null
@@ -129,6 +130,7 @@ let Medkit: Sprite = null
 let HandUI: Sprite = null
 let _1: Sprite = null
 let Weapon = 0
+let _2B: Sprite = null
 let Menu2: miniMenu.MenuSprite = null
 let A = 0
 A = 1
@@ -139,7 +141,7 @@ let Menu = miniMenu.createMenu(
 miniMenu.createMenuItem("Single Player"),
 miniMenu.createMenuItem("2-player")
 )
-Render.getRenderSpriteInstance().x = 999
+Render.getRenderSpriteInstance().x = 200
 Menu.setTitle("Main menu")
 Menu.setDimensions(100, 100)
 Menu.setPosition(81, 95)
