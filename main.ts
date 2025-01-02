@@ -45,7 +45,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             HandUI.setImage(assets.image`HandPistol`)
         } else {
             HandUI.setImage(assets.image`Punch0`)
-            _2 = sprites.createProjectileFromSprite(assets.image`3`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
+            _2 = sprites.createProjectileFromSprite(assets.image`PunchEffect`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
             pause(300)
             sprites.destroy(_2)
             HandUI.setImage(assets.image`HandIdle`)

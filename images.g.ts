@@ -113,10 +113,6 @@ ffffffffcceee444dddd344eeecffffffffff
 ffffffffffeee4444444444eeefffffffffff
 fffffffffffee444444444eefffffffffffff
 `;
-            case "pVPw!Xw@YO$}4Bt+dTlB":
-            case "PunchEffect":return img`
-f 
-`;
             case "image3":
             case "5":return img`
 . . . 2 2 . . . 
@@ -549,6 +545,10 @@ fffffffffffff.............................
 2 5 2 
 5 5 5 
 2 5 2 
+`;
+            case "pVPw!Xw@YO$}4Bt+dTlB":
+            case "PunchEffect":return img`
+f 
 `;
         }
         return null;
