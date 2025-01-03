@@ -1,0 +1,31 @@
+License: Doom-Inspired MakeCode Arcade Project
+
+## Inspiration
+Inspired by: Doom (1993) from id Software
+
+## Asset Attribution
+All the below textures and sprites are loosely based on textures and sprites of Doom, but are **recreations, not the direct textures**. 
+All original assets are copyrighted to id Software:
+- "HandPistol"
+- "Enemy"
+- "PistolShoot"
+- "Face"
+- "Hand"
+- "Punch"
+These have been remade for the purposes of this non-commercial project in likeness to the game.
+
+## Non-Commercial Fan Project
+This is a non-commercial, fan-made port of the original Doom (1993) onto Microsoft MakeCode Arcade.
+I don't make any money off this and nor commercially use it.
+ 
+## Redistribution and Credit
+- **Credit must be given**: If you copy, distribute, or modify this project, you must give credit to both Nolan0027 (creator) and id Software (inspiration).
+- **No plagiarism**: Do not submit a direct copy of this repository or it's files as your own work.
+
+## Disclaimer
+This project is in no way affiliated with or endorsed by id Software, Bethesda, or anyone else related.
+If this repository violates any kind of copyright law, for any reason, please contact the repository owner [nolanjhiggins192@gmail.com], and the issue will hopefully be resolved quickly.
+
+## Notes
+Code and assets custom-made for this project are licensed under the MIT/Creative Commons
+This license does not cover the original Doom assets or any derivative works based on them.
