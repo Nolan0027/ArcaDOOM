@@ -1,6 +1,7 @@
 Play
-Latest release (excluding 1.2 PreRelease 2): [https://nolan0027.github.io/ArcaDOOM](https://nolan0027.github.io/ArcaDOOM)
-1.1: https://arcade.makecode.com/S40046-28352-11193-62996
+- Latest release (excluding 1.2 PreRelease 2): [https://nolan0027.github.io/ArcaDOOM](https://nolan0027.github.io/ArcaDOOM)
+- 1.1: https://arcade.makecode.com/S40046-28352-11193-62996
+- Earliest known version: https://arcade.makecode.com/S73778-07220-75674-63744
 
 Current Filesize
 - Commit 46 (1.2Pre2.2): 63Kb (.png-based download)
