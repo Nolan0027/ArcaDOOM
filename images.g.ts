@@ -485,6 +485,29 @@ f f f 4 4 4 4 2 2 4 4 4 4 f f f
 f f f f 4 4 4 4 4 4 4 4 f f f f 
 f f f f f f f f f f f f f f f f 
 `;
+            case "image6":
+            case "Crosshair":return img`
+. . f . . 
+. . . . . 
+f . . . f 
+. . . . . 
+. . f . . 
+`;
+            case "image4":
+            case "Armor2":return img`
+. . . e e e e . . . 
+. 1 e e d e e e e . 
+e e e d d d d e e e 
+e e e d d d d d e e 
+e e d d d d d d e e 
+e e d d d d d d d e 
+e d d d d d d d d e 
+e e e e e e e e e e 
+e e 7 7 e e 7 7 e e 
+e e 7 7 e e 7 7 e e 
+. e . . e e . . e . 
+. e . . . . . . e . 
+`;
         }
         return null;
     })

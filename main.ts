@@ -1,28 +1,65 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (A == 0) {
-        A = 1
-        Switch = miniMenu.createMenu(
-        miniMenu.createMenuItem("Back"),
-        miniMenu.createMenuItem("1", assets.image`Hand`),
-        miniMenu.createMenuItem("2", assets.image`Pistol`)
-        )
-        Switch.setTitle("Switch weapon")
-        Switch.setFlag(SpriteFlag.RelativeToCamera, true)
-        Switch.setDimensions(100, 105)
-        Switch.setPosition(81, 86)
-        Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
-            if (selectedIndex == 0) {
-            	
-            } else if (selectedIndex == 1) {
-                B = 0
-                HandUI.setImage(assets.image`Hand`)
-            } else if (selectedIndex == 2) {
-                B = 1
-                HandUI.setImage(assets.image`HandPistol`)
+        if (_1.tileKindAt(TileDirection.Left, assets.tile`Door2`) || (_1.tileKindAt(TileDirection.Top, assets.tile`Door2`) || (_1.tileKindAt(TileDirection.Right, assets.tile`Door2`) || _1.tileKindAt(TileDirection.Bottom, assets.tile`Door2`)))) {
+            if (Level == 0) {
+                Level = 1
+                ArmorItem = sprites.create(assets.image`Armor2`, SpriteKind.Food)
+                ArmorItem.setPosition(45, 269)
+                ArmorItem.scale = 0.6
+                tiles.setCurrentTilemap(tilemap`Hangar2`)
+                _3.setPosition(51, 269)
+                Render.getRenderSpriteInstance().setPosition(60, 300)
+                Render.setViewAngleInDegree(260)
             }
-            Switch.close()
-            A = 0
-        })
+        } else {
+            A = 1
+            Switch = miniMenu.createMenu(
+            miniMenu.createMenuItem("Back"),
+            miniMenu.createMenuItem("1", assets.image`Hand`),
+            miniMenu.createMenuItem("2", assets.image`Pistol`)
+            )
+            Switch.setTitle("Switch weapon")
+            Switch.setFlag(SpriteFlag.RelativeToCamera, true)
+            Switch.setDimensions(100, 105)
+            Switch.setPosition(81, 86)
+            Switch.onButtonPressed(controller.A, function (selection, selectedIndex) {
+                if (selectedIndex == 0) {
+                	
+                } else if (selectedIndex == 1) {
+                    B = 0
+                    HandUI.setImage(assets.image`Hand`)
+                } else if (selectedIndex == 2) {
+                    B = 1
+                    HandUI.setImage(assets.image`HandPistol`)
+                }
+                Switch.close()
+                A = 0
+            })
+        }
+    }
+})
+scene.onHitWall(SpriteKind.Player, function (sprite, location) {
+    if (tiles.tileAtLocationEquals(location, assets.tile`WiresAcid`)) {
+        info.changeLifeBy(-1)
+    }
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    if (sprite == _2B) {
+        if (Armor == 0) {
+            info.changeLifeBy(-19)
+        } else if (Armor == 5) {
+            info.changeLifeBy(-17)
+        } else if (Armor == 10) {
+            info.changeLifeBy(-14)
+        } else if (Armor == 15) {
+            info.changeLifeBy(-11)
+        } else if (Armor == 20) {
+            info.changeLifeBy(-8)
+        } else if (Armor > 25) {
+            info.changeLifeBy(-7)
+        }
+        sprites.destroy(otherSprite)
+        RenderStats()
     }
 })
 function Start (N: number) {
@@ -30,11 +67,14 @@ function Start (N: number) {
     Render.setViewMode(ViewMode.raycastingView)
     B = 1
     _1 = Render.getRenderSpriteInstance()
+    Crosshair = sprites.create(assets.image`Crosshair`, SpriteKind.Player)
     HandUI = sprites.create(assets.image`HandPistol`, SpriteKind.Player)
     Medkit = sprites.create(assets.image`Medkit`, SpriteKind.Food)
     UI = sprites.create(assets.image`UIbar`, SpriteKind.Player)
     Face = sprites.create(assets.image`Face`, SpriteKind.Player)
     _3 = sprites.create(assets.image`Enemy`, SpriteKind.Enemy)
+    Crosshair.setFlag(SpriteFlag.RelativeToCamera, true)
+    Crosshair.setPosition(79, 62)
     scene.setBackgroundImage(assets.image`Bg`)
     tiles.setCurrentTilemap(tilemap`Hangar`)
     ArmorItem = sprites.create(assets.image`Armor`, SpriteKind.Food)
@@ -43,10 +83,10 @@ function Start (N: number) {
     HandUI.setFlag(SpriteFlag.RelativeToCamera, true)
     UI.setFlag(SpriteFlag.RelativeToCamera, true)
     HandUI.scale = 1.2
-    HandUI.setPosition(135, 97)
+    HandUI.setPosition(135, 101)
     UI.setPosition(81, 109)
     UI.scale = 1.5
-    Render.move(Render.getRenderSpriteInstance(), 190)
+    Render.move(Render.getRenderSpriteInstance(), 230)
     info.setScore(0)
     info.setLife(100)
     Render.getRenderSpriteInstance().setPosition(248, 45)
@@ -81,12 +121,6 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
-    if (sprite == _2B) {
-        info.changeLifeBy(-19)
-        RenderStats()
-    }
-})
 function RenderStats () {
     sprites.destroy(Health)
     sprites.destroy(ArmorText)
@@ -118,23 +152,26 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     sprites.destroy(otherSprite)
     RenderStats()
 })
-let Armor = 0
-let _2B: Sprite = null
 let _2: Sprite = null
 let ArmorText: TextSprite = null
 let Health: TextSprite = null
-let ArmorItem: Sprite = null
-let _3: Sprite = null
 let Face: Sprite = null
 let UI: Sprite = null
 let Medkit: Sprite = null
-let _1: Sprite = null
+let Crosshair: Sprite = null
+let Armor = 0
+let _2B: Sprite = null
 let HandUI: Sprite = null
 let B = 0
 let Switch: miniMenu.MenuSprite = null
+let _3: Sprite = null
+let ArmorItem: Sprite = null
+let _1: Sprite = null
 let Menu2: miniMenu.MenuSprite = null
+let Level = 0
 let A = 0
 A = 1
+Level = 0
 Render.setViewMode(ViewMode.tilemapView)
 scene.setBackgroundImage(assets.image`Bg`)
 tiles.setCurrentTilemap(tilemap`Void`)
@@ -169,7 +206,7 @@ forever(function () {
     music.play(music.createSong(assets.song`theme1`), music.PlaybackMode.UntilDone)
     music.play(music.createSong(assets.song`theme2`), music.PlaybackMode.UntilDone)
 })
-game.onUpdateInterval(3000, function () {
+game.onUpdateInterval(2300, function () {
     if (A == 0) {
         _2B = sprites.createProjectileFromSprite(assets.image`5`, _3, 100, 0)
         _2B.follow(Render.getRenderSpriteInstance())

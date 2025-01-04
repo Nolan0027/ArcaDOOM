@@ -74,6 +74,16 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Medkit"
     },
+    "image6": {
+        "data": "hwQFAAUAAAAADwAAAAAAAA8ADwAAAAAAAA8AAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Crosshair"
+    },
+    "image4": {
+        "data": "hwQKAAwAAAAA7u7u7gAAABDu7u3u7gAA4O7d7XcAAADu3d3tdwAAAN7d3e3uDgAA7t3d7e4OAADu3d3tdwAAAODe3e13AAAA4O7e7e7uAAAA7u7u7gAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Armor2"
+    },
     "song2": {
         "data": "008c000408030205001c000f0a006400f4010a00000400000000000000000000000000000000021e0000000400012008000c00012c20002400011b2c003000011934003c00011e08001c000e050046006603320000040a002d00000064001400010000020000020c0010001400012018001c00011e",
         "mimeType": "application/mkcd-song",
