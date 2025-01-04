@@ -1,4 +1,4 @@
-> Open this page at [https://nolan0027.github.io/arcadoom/](https://nolan0027.github.io/arcadoom/)
+> Open this page at [https://nolan0027.github.io/ArcaDOOM](https://nolan0027.github.io/ArcaDOOM)
 
 Current Filesize
 - Commit 46 (1.2Pre2.2): 63Kb (.png-based download)
@@ -6,24 +6,23 @@ Current Filesize
 This port has
 - Enemies (1)
 - Shooting
-- Hangar
+- Punching
+- Items
+- Hangar (mostly)
 - Stats
 - Doom's UI
 - Alot more
 
 Plans
-- items (2)
-- More enemies (1)
+- items (done, 2)
 - Menu (done)
-- Textures overhual (yes)
-- Level 1
-- Optimize to under a megabyte (DONE, 886Kb as of 42nd commit)
+- Textures overhual (done)
+- Hangar complete
 - Add physical pistol item
 - Shotgun
 - Chaingun
-- Pause menu
 - Courpses
-- Warning
+- Warning & credits
 - Ammo system & ammo boxes
 - New switch menu with array system
 
