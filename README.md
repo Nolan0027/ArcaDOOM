@@ -1,4 +1,6 @@
-> Open this page at [https://nolan0027.github.io/ArcaDOOM](https://nolan0027.github.io/ArcaDOOM)
+Play
+Latest release (excluding 1.2 PreRelease 2): [https://nolan0027.github.io/ArcaDOOM](https://nolan0027.github.io/ArcaDOOM)
+1.1: https://arcade.makecode.com/S40046-28352-11193-62996
 
 Current Filesize
 - Commit 46 (1.2Pre2.2): 63Kb (.png-based download)
@@ -14,7 +16,7 @@ This port has
 - Alot more
 
 Plans
-- items (done, 2)
+- items (done, 3)
 - Menu (done)
 - Textures overhual (done)
 - Hangar complete
