@@ -12,6 +12,7 @@ This port has
 - Punching
 - Items
 - Hangar (mostly)
+- Ceilings
 - Stats
 - Doom's UI
 - Alot more
@@ -20,11 +21,11 @@ Plans
 - items (done, 3)
 - Menu (done)
 - Textures overhual (done)
-- Hangar complete
+- Hangar completed
 - Add physical pistol item
 - Shotgun
 - Chaingun
-- Courpses
+- Courpses (done)
 - Warning & credits
 - Ammo system & ammo boxes
 - New switch menu with array system
