@@ -84,6 +84,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Armor2"
     },
+    "image8": {
+        "data": "hwQFAAUAAAAAAgAAAAAAAAIAAgAAAAAAAAIAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Crosshair2"
+    },
     "song2": {
         "data": "008c000408030205001c000f0a006400f4010a00000400000000000000000000000000000000021e0000000400012008000c00012c20002400011b2c003000011934003c00011e08001c000e050046006603320000040a002d00000064001400010000020000020c0010001400012018001c00011e",
         "mimeType": "application/mkcd-song",

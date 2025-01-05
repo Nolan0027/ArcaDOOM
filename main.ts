@@ -3,11 +3,14 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         if (_1.tileKindAt(TileDirection.Left, assets.tile`Door2`) || (_1.tileKindAt(TileDirection.Top, assets.tile`Door2`) || (_1.tileKindAt(TileDirection.Right, assets.tile`Door2`) || _1.tileKindAt(TileDirection.Bottom, assets.tile`Door2`)))) {
             if (Level == 0) {
                 Level = 1
+                sprites.destroy(Render.getRenderSpriteInstance())
+                sprites.destroy(_1)
                 ArmorItem = sprites.create(assets.image`Armor2`, SpriteKind.Food)
                 ArmorItem.setPosition(45, 269)
                 ArmorItem.scale = 0.6
                 tiles.setCurrentTilemap(tilemap`Hangar2`)
-                _3.setPosition(51, 269)
+                En.setPosition(51, 269)
+                _1 = Render.getRenderSpriteInstance()
                 Render.getRenderSpriteInstance().setPosition(60, 300)
                 Render.setViewAngleInDegree(260)
             }
@@ -38,30 +41,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
-scene.onHitWall(SpriteKind.Player, function (sprite, location) {
-    if (tiles.tileAtLocationEquals(location, assets.tile`WiresAcid`)) {
-        info.changeLifeBy(-1)
-    }
-})
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
-    if (sprite == _2B) {
-        if (Armor == 0) {
-            info.changeLifeBy(-19)
-        } else if (Armor == 5) {
-            info.changeLifeBy(-17)
-        } else if (Armor == 10) {
-            info.changeLifeBy(-14)
-        } else if (Armor == 15) {
-            info.changeLifeBy(-11)
-        } else if (Armor == 20) {
-            info.changeLifeBy(-8)
-        } else if (Armor > 25) {
-            info.changeLifeBy(-7)
-        }
-        sprites.destroy(otherSprite)
-        RenderStats()
-    }
-})
 function Start (N: number) {
     Menu2.close()
     Render.setViewMode(ViewMode.raycastingView)
@@ -72,7 +51,7 @@ function Start (N: number) {
     Medkit = sprites.create(assets.image`Medkit`, SpriteKind.Food)
     UI = sprites.create(assets.image`UIbar`, SpriteKind.Player)
     Face = sprites.create(assets.image`Face`, SpriteKind.Player)
-    _3 = sprites.create(assets.image`Enemy`, SpriteKind.Enemy)
+    En = sprites.create(assets.image`Enemy`, SpriteKind.Enemy)
     Crosshair.setFlag(SpriteFlag.RelativeToCamera, true)
     Crosshair.setPosition(79, 62)
     scene.setBackgroundImage(assets.image`Bg`)
@@ -88,22 +67,31 @@ function Start (N: number) {
     UI.scale = 1.5
     Render.move(Render.getRenderSpriteInstance(), 230)
     info.setScore(0)
-    info.setLife(100)
+    if (N == 1) {
+        info.setLife(100)
+    } else if (N == 2) {
+        info.setLife(75)
+    } else {
+        info.setLife(45)
+    }
     Render.getRenderSpriteInstance().setPosition(248, 45)
-    Render.setViewAngleInDegree(90)
     Face.setPosition(80, 110)
     Face.scale = 0.6
-    _3.setPosition(180, 400)
-    _3.scale = 0.3
+    En.setPosition(180, 400)
+    En.scale = 0.3
     Medkit.setPosition(200, 420)
     Medkit.scale = 0.6
     Face.setFlag(SpriteFlag.RelativeToCamera, true)
-    Health = textsprite.create("100")
-    ArmorText = textsprite.create("0")
     RenderStats()
     music.play(music.createSong(assets.song`Drums`), music.PlaybackMode.LoopingInBackground)
     A = 0
+    Render.setViewAngleInDegree(90)
 }
+scene.onHitWall(SpriteKind.Player, function (sprite, location) {
+    if (tiles.tileAtLocationEquals(location, assets.tile`WiresAcid`)) {
+        info.changeLifeBy(-1)
+    }
+})
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (A == 0) {
         if (B == 1) {
@@ -121,6 +109,25 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    if (sprite == EnemyProj) {
+        if (Armor == 0) {
+            info.changeLifeBy(-19)
+        } else if (Armor == 5) {
+            info.changeLifeBy(-17)
+        } else if (Armor == 10) {
+            info.changeLifeBy(-14)
+        } else if (Armor == 15) {
+            info.changeLifeBy(-11)
+        } else if (Armor == 20) {
+            info.changeLifeBy(-8)
+        } else if (Armor > 25) {
+            info.changeLifeBy(-7)
+        }
+        sprites.destroy(otherSprite)
+        RenderStats()
+    }
+})
 function RenderStats () {
     sprites.destroy(Health)
     sprites.destroy(ArmorText)
@@ -135,6 +142,13 @@ function RenderStats () {
     Health.scale = 1.2
     ArmorText.scale = 1.2
 }
+Render.registerOnSpriteDirectionUpdateHandler(function (Crosshair, dir) {
+    if (Render.isSpritesOverlapZ(En, Crosshair)) {
+        Crosshair.setImage(assets.image`Crosshair2`)
+    } else {
+        Crosshair.setImage(assets.image`Crosshair`)
+    }
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (sprite == _2) {
         sprites.destroy(otherSprite)
@@ -152,19 +166,19 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     sprites.destroy(otherSprite)
     RenderStats()
 })
-let _2: Sprite = null
 let ArmorText: TextSprite = null
 let Health: TextSprite = null
+let Armor = 0
+let EnemyProj: Sprite = null
+let _2: Sprite = null
 let Face: Sprite = null
 let UI: Sprite = null
 let Medkit: Sprite = null
 let Crosshair: Sprite = null
-let Armor = 0
-let _2B: Sprite = null
 let HandUI: Sprite = null
 let B = 0
 let Switch: miniMenu.MenuSprite = null
-let _3: Sprite = null
+let En: Sprite = null
 let ArmorItem: Sprite = null
 let _1: Sprite = null
 let Menu2: miniMenu.MenuSprite = null
@@ -208,7 +222,7 @@ forever(function () {
 })
 game.onUpdateInterval(2300, function () {
     if (A == 0) {
-        _2B = sprites.createProjectileFromSprite(assets.image`5`, _3, 100, 0)
-        _2B.follow(Render.getRenderSpriteInstance())
+        EnemyProj = sprites.createProjectileFromSprite(assets.image`5`, En, 100, 0)
+        EnemyProj.follow(Render.getRenderSpriteInstance())
     }
 })

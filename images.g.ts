@@ -508,6 +508,14 @@ e e 7 7 e e 7 7 e e
 . e . . e e . . e . 
 . e . . . . . . e . 
 `;
+            case "image8":
+            case "Crosshair2":return img`
+. . 2 . . 
+. . . . . 
+2 . . . 2 
+. . . . . 
+. . 2 . . 
+`;
         }
         return null;
     })
