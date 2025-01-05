@@ -4,7 +4,7 @@ Play
 - Earliest known version: https://arcade.makecode.com/S73778-07220-75674-63744
 
 Current Filesize
-- Commit 46 (1.2Pre2.2): 63Kb (.png-based download)
+- Commit 57 (1.2Pre2.3): 71Kb (.png-based download)
 
 This port has
 - Enemies (1)
