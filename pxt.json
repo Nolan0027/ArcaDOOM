@@ -4,7 +4,7 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "pxt-raycasting": "github:aqeeaqee/pxt-raycasting#v0.3.18",
+        "pxt-raycasting": "github:The-Code-Zone/Raycasting-pxt-extension#6f3bd81686da0cc654fb0cff7c5c2bf8528480c3",
         "arcade-mini-menu": "github:riknoll/arcade-mini-menu#v0.0.1",
         "arcade-text": "github:microsoft/arcade-text#v1.3.0"
     },

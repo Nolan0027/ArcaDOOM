@@ -3,14 +3,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         if (_1.tileKindAt(TileDirection.Left, assets.tile`Door2`) || (_1.tileKindAt(TileDirection.Top, assets.tile`Door2`) || (_1.tileKindAt(TileDirection.Right, assets.tile`Door2`) || _1.tileKindAt(TileDirection.Bottom, assets.tile`Door2`)))) {
             if (Level == 0) {
                 Level = 1
-                sprites.destroy(Render.getRenderSpriteInstance())
-                sprites.destroy(_1)
                 ArmorItem = sprites.create(assets.image`Armor2`, SpriteKind.Food)
                 ArmorItem.setPosition(45, 269)
                 ArmorItem.scale = 0.6
                 tiles.setCurrentTilemap(tilemap`Hangar2`)
+                Render.setCeilingTilemap(tilemap`Hangar2Ceil`)
                 En.setPosition(51, 269)
-                _1 = Render.getRenderSpriteInstance()
                 Render.getRenderSpriteInstance().setPosition(60, 300)
                 Render.setViewAngleInDegree(260)
             }
@@ -54,8 +52,8 @@ function Start (N: number) {
     En = sprites.create(assets.image`Enemy`, SpriteKind.Enemy)
     Crosshair.setFlag(SpriteFlag.RelativeToCamera, true)
     Crosshair.setPosition(79, 62)
-    scene.setBackgroundImage(assets.image`Bg`)
     tiles.setCurrentTilemap(tilemap`Hangar`)
+    Render.setCeilingTilemap(tilemap`HangarCeil`)
     ArmorItem = sprites.create(assets.image`Armor`, SpriteKind.Food)
     ArmorItem.setPosition(26, 72)
     ArmorItem.scale = 0.8
@@ -87,11 +85,6 @@ function Start (N: number) {
     A = 0
     Render.setViewAngleInDegree(90)
 }
-scene.onHitWall(SpriteKind.Player, function (sprite, location) {
-    if (tiles.tileAtLocationEquals(location, assets.tile`WiresAcid`)) {
-        info.changeLifeBy(-1)
-    }
-})
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (A == 0) {
         if (B == 1) {
@@ -142,16 +135,9 @@ function RenderStats () {
     Health.scale = 1.2
     ArmorText.scale = 1.2
 }
-Render.registerOnSpriteDirectionUpdateHandler(function (Crosshair, dir) {
-    if (Render.isSpritesOverlapZ(En, Crosshair)) {
-        Crosshair.setImage(assets.image`Crosshair2`)
-    } else {
-        Crosshair.setImage(assets.image`Crosshair`)
-    }
-})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     if (sprite == _2) {
-        sprites.destroy(otherSprite)
+        otherSprite.setImage(assets.image`Dead`)
         info.changeScoreBy(5)
     }
 })
@@ -187,7 +173,6 @@ let A = 0
 A = 1
 Level = 0
 Render.setViewMode(ViewMode.tilemapView)
-scene.setBackgroundImage(assets.image`Bg`)
 tiles.setCurrentTilemap(tilemap`Void`)
 let Menu = miniMenu.createMenu(
 miniMenu.createMenuItem("Single Player"),
