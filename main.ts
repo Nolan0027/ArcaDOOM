@@ -90,7 +90,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         if (B == 1) {
             HandUI.setImage(assets.image`PistolShoot`)
             music.play(music.createSoundEffect(WaveShape.Noise, 1072, 359, 255, 255, 200, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.InBackground)
-            _2 = sprites.createProjectileFromSprite(assets.image`3`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 100, Render.getAttribute(Render.attribute.dirY) * 100)
+            _2 = sprites.createProjectileFromSprite(assets.image`3`, Render.getRenderSpriteInstance(), Render.getAttribute(Render.attribute.dirX) * 140, Render.getAttribute(Render.attribute.dirY) * 140)
             pause(400)
             HandUI.setImage(assets.image`HandPistol`)
         } else {
